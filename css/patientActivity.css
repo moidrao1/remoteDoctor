@@ -1,0 +1,382 @@
+.hidden {
+    display:none;
+}
+* {
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+body, html { 
+    height:100%;
+    width: 100%;
+    
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    
+    background: rgba(197, 194, 204, 0.08);  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, rgba(0, 0, 0, 0.03), rgba(197, 194, 204, 0.08));  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.03), rgba(197, 194, 204, 0.08));
+}
+
+main {
+    flex: 1 0 auto;
+    
+    background-image: url('imgs/B2.jpg');
+    background-repeat: repeat;
+    background-blend-mode: lighten;
+    opacity: 0.9;
+}
+
+/* Used this 'cause of fixed sidenav on large screens*/
+main, footer {
+  padding-left: 300px;
+}
+@media only screen and (max-width : 992px) {
+    main, footer {
+        padding-left: 0;
+    }
+}
+
+nav {
+    background: #00c6ff;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0072ff, #00c6ff);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0072ff, #00c6ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+/* Used as background*/
+.outer {
+    /*background-color: rgba(0, 0, 0, 0.1);*/
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+
+    font-weight: normal;
+    color: black;
+    text-align: justify;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.outer .row.input-field {
+    padding: 1rem 1rem 1rem 1rem; 
+}
+/* label focus color */
+.outer .row .input-field input[type=text]:focus + label
+{
+    color: #0072ff;
+}
+/* label underline focus color */
+.outer .row .input-field input[type=text]:focus
+{
+    border-bottom: 1px solid #0072ff;
+    box-shadow: 0 1px 0 0 #0072ff;
+}
+a.button-collapse.show-on-large {
+    width: 0px;
+    height: 0px;
+}
+#rdBtn {
+  margin: 10px 0 0 20px;
+  padding-right: 1%;
+  padding-left: 1%;
+}
+#rdBtn label {
+  font-size: 12px;
+  font-weight: normal;
+  color: black;
+  text-align: justify;
+  padding-right: 20px;
+}
+.container .input-field {
+  margin: 10px 0 0 20px;
+  padding-right: 10%;
+  padding-left: 10%;
+}
+/* label color */
+.container .input-field label {
+  color: #000;
+}
+/* label underline color */
+.container .input-field input[type=text], .container .input-field input[type=number],
+.container .input-field input[type=email], .container .input-field input[type=password]
+{
+  border-bottom: 1px solid rgba(0, 0, 0, 0.35);
+  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.2);
+} 
+
+/* label focus color */
+.container .input-field input[type=text]:focus + label, .container .input-field input[type=number]:focus + label,
+.container .input-field input[type=email]:focus + label, .container .input-field input[type=password]:focus + label
+{
+  color: #0072ff;
+  left: 0.2rem;
+}
+
+.container .input-field label.active {
+  left: 0.2rem;
+}
+
+ /* label underline focus color */
+.container .input-field input[type=text]:focus, .container .input-field input[type=number]:focus,
+.container .input-field input[type=email]:focus, .container .input-field input[type=password]:focus
+{
+  border-bottom: 1px solid #0072ff;
+  box-shadow: 0 1px 0 0 #0072ff;
+  left: 0.2rem;
+} 
+
+/* valid color */
+.container .input-field input[type=text].valid, .container .input-field input[type=number].valid 
+.container .input-field input[type=email].valid, .container .input-field input[type=password].valid 
+{
+  border-bottom: 1px solid #2ecc71;
+  box-shadow: 0 1px 0 0 #2ecc71;
+}
+
+ /* invalid color */
+.container .input-field input[type=text].invalid, .container .input-field input[type=number].invalid
+.container .input-field input[type=email].invalid, .container .input-field input[type=password].invalid
+{
+  border-bottom: 1px solid #e74c3c;
+  box-shadow: 0 1px 0 0 #e74c3c;
+}
+
+[type="checkbox"]:checked+label:before {
+  border-right: 2px solid #0072ff;
+  border-bottom: 2px solid #0072ff;
+}
+
+[type="radio"]:checked+label:after, [type="radio"].with-gap:checked+label:before, [type="radio"].with-gap:checked+label:after {
+  border: 2px solid #0072ff;
+}
+
+[type="radio"]:checked+label:after, [type="radio"].with-gap:checked+label:after {
+  background-color: #0072ff;
+}
+
+#accountSettings > ul > li.active > div.collapsible-body > span > div.row.center-align.jumbotron
+{
+    background-image: url('imgs/A2.jpg');
+    background-attachment: fixed;
+    margin-bottom: 0px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    
+    object-fit: none;
+}
+#accountSettings > ul > li.active > div.collapsible-body.userProfile{
+    display: block;
+    padding: 0 0 0 0;
+}
+#accountSettings > ul > li.active > div.collapsible-body {
+    background: #ddd; 
+    background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ddd);
+    background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ddd);
+}
+#accountSettings > ul > li.active > div.collapsible-body > span > div.container.hoverable > form {
+    margin-top: 4%;
+    margin-bottom: 4%;
+    padding: 3% 3% 0 3%;
+}
+#accountSettings > ul > li.active > div.collapsible-body.userProfile > span > div.row.center-align.jumbotron > div > img:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+
+#accountSettings > ul > li.active > div.collapsible-body.userProfile > span > div.row.center-align.jumbotron > div > img {
+    border: 1px solid #ddd;
+}
+.card-panel {
+    margin-left: 5%;
+    margin-right: 5%;
+
+    padding-right: 5%;
+    padding-left: 5%;
+}
+#accountSettings .collapsible {
+    padding-right: 3%;
+    padding-left: 3%;
+}
+.remember-me-check {
+  position: relative;
+  top: 10px;
+  margin: 0 0 0 10px;
+}
+
+/* Switch */
+.switch label input[type=checkbox]:checked+.lever {
+    background-color: rgba(0, 137, 236, 0.47);
+}
+.switch label input[type=checkbox]:checked+.lever:after {
+    background-color: #0072ff;
+}
+
+.card-panel .row .input-field {
+    margin-top: 2%;
+}
+
+/* label focus color */
+.card-panel .row .input-field input[type=text]:focus + label,
+.card-panel .row .input-field input[type=date]:focus + label,
+.card-panel .row .input-field input[type=number]:focus + label,
+.card-panel .row .input-field input[type=time]:focus + label
+{
+  color: #0072ff;
+  left: 0.2rem;
+}
+
+.card-panel .row .input-field label.active {
+  left: 0.2rem;
+}
+
+ /* label underline focus color */
+.card-panel .row .input-field input[type=text]:focus,.card-panel .row .input-field input[type=date]:focus,.card-panel .row .input-field input[type=time]:focus,
+.card-panel .row .input-field input[type=number]:focus
+{
+  border-bottom: 1px solid #0072ff;
+  box-shadow: 0 1px 0 0 #0072ff;
+  left: 0.2rem;
+}
+
+#contact{
+    /*background-color: rgba(0, 0, 0, 0.1);*/
+    /*box-shadow: 0px 0px 10px 16px rgba(0, 0, 0, 0.16);*/
+    /*border: 1px solid rgba(0, 0, 0, 0.1);*/
+    /*border-radius: 3px;*/
+    /*Text Inside Container*/  
+    font-weight: normal;
+    color: black;
+    text-align: justify;
+}
+
+/* label color */
+.input-field label {
+    color: #000;
+}
+/* label focus color */
+.row .input-field input[type=text]:focus + label, .row .input-field input[type=tel]:focus + label, .row .input-field input[type=email]:focus + label, .row .input-field input[type=password]:focus + label 
+{
+    color: #0072ff;
+}
+/* label underline focus color */
+.row .input-field input[type=text]:focus, .row .input-field input[type=tel]:focus, .row .input-field input[type=email]:focus, .row .input-field input[type=password]:focus
+{
+    border-bottom: 1px solid #0072ff;
+    box-shadow: 0 1px 0 0 #0072ff;
+}
+/* textarea color */
+.row textarea.materialize-textarea{
+    color: #000;
+}
+.row textarea.materialize-textarea:focus + label {
+    color: #0072ff;
+}
+/* textare focus color */
+.row textarea.materialize-textarea:focus {
+    border-bottom: 1px solid #0072ff;
+    box-shadow: 0 1px 0 0 #0072ff;
+}
+/* valid color */
+.row .input-field input[type=text].valid, .row .input-field input[type=tel].valid, .row .input-field input[type=email].valid
+{
+    border-bottom: 1px solid #2ecc71;
+    box-shadow: 0 1px 0 0 #2ecc71;
+}
+/* invalid color */
+.row .input-field input[type=text].invalid, .row .input-field input[type=tel].invalid, .row .input-field input[type=email].invalid {
+    border-bottom: 1px solid #e74c3c;
+    box-shadow: 0 1px 0 0 #e74c3c;
+}
+/* icon prefix focus color */
+.input-field .prefix.active {
+    color: #0072ff;
+}
+
+/* Sidenav icons and buttons color */
+.side-nav li>a>i {
+    color: rgba(12, 12, 12, 0.76);
+    width: 28px;
+}
+.side-nav li>a>i, .side-nav li>a>[class^="mdi-"], .side-nav li>a li>a>[class*="mdi-"], .side-nav li>a>i.material-icons {
+    color: rgba(12, 12, 12, 0.76);
+    font-size: 27px;
+}
+
+/* Settings button color */
+#slide-out > li:nth-child(9) > ul > li > div.collapsible-header > a {
+    color: rgba(12, 12, 12, 0.76);
+    font-size: 15px;
+    font-weight: 500;
+} 
+/* Settings button for large screens */
+@media only screen and (min-width : 992px) {
+    .settings{
+       margin-left: 16px;
+    }
+}
+
+/* footer */
+.footer-copyright {
+    background-color: rgba(0, 0, 0, 0.58));
+    background: -webkit-linear-gradient(to top, rgba(117, 117, 117, 0.76), rgba(0, 0, 0, 0.58));  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, rgba(117, 117, 117, 0.76), rgba(0, 0, 0, 0.58)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    padding-top: 2px;
+}
+
+@media only screen and (min-width : 768px) {
+    #medicalHistory > div > div:nth-child(1) > img.image {
+        height: 150px;
+        width: 80%; 
+    }
+}
+@media only screen and (min-width : 768px) {
+    #appointments > div > div:nth-child(1) > img.image {
+        height: 200px;
+    }
+}
+
+@media only screen and (max-width : 767px) {
+    #emergencyCall > div > div > div.col.m6.s12.right-align, #emergencyCall > div > div > div.col.m6.s12.left-align {
+        text-align: center;
+    }
+}
+
+.picker__date-display, .picker__day--selected, .picker__day--selected:hover, .picker--focused .picker__day--selected {
+    background-color: #3f51b5;
+}
+.picker__today, .picker__close, .picker__day.picker__day--today {
+    color: #3f51b5;
+}
+
+.input-field input[type=search] {
+    margin-left: 40px;
+    max-width: 75%;
+}
+
+#emergencyCall > div.card-panel {
+    background: #ddd; 
+    background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ddd);
+    background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ddd);
+}
+
+#profile-card .card-profile-image {
+    border: 2px solid #cccccc;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    margin: auto;
+    z-index: 1;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.chart-container {
+    width: 80%;
+    margin: 10px auto;
+}
+#reports > div > div > div:nth-child(1) > ul > li.indicator {
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    background-color: #00bcd4;
+    will-change: left, right;
+}

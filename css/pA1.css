@@ -1,0 +1,159 @@
+* {
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+body, html { 
+    height:100%;
+    width: 100%;
+    
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    
+    background: rgba(197, 194, 204, 0.08);  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, rgba(0, 0, 0, 0.03), rgba(197, 194, 204, 0.08));  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.03), rgba(197, 194, 204, 0.08));
+    }
+main {
+    flex: 1 0 auto;
+}
+nav{
+    background: rgba(0,0,0,0.59);  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, rgba(0, 0, 0, 0.68), rgba(0,0,0,0.59));  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.68), rgba(0,0,0,0.59));
+}
+nav .brand-logo.left {
+    left: 1.0rem;
+}
+ul#dropdown1.dropdown-content {
+    min-width: 250px;
+}
+.dropdown-content li {
+    min-height: 0px;
+    font-size: 16px;
+    margin-left: 5px;
+}
+.dropdown-content li>a, .dropdown-content li>span {
+    font-size: 16px;
+    color: #565858;
+    line-height: 20px;
+    padding: 14px 16px;
+}
+.jumbotron{
+    background-image: url('imgs/UP7.jpg');
+    background-attachment: absolute;
+    margin-bottom: 0px;
+
+    height: 40%;
+    width: 100%;
+}
+.jumbotron img {
+    width: 8%;
+    height: 8%;
+    margin-top: 2%;
+}
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) { 
+    .jumbotron img {
+        width: 8%;
+        height: 8%;
+        margin-top: 1%;
+    }
+}
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) and (max-width: 1199px) { 
+    .jumbotron img {
+        width: 12%;
+        height: 12%;
+        margin-top: 1%;
+    }
+}
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) and (max-width: 991px) { 
+    .jumbotron img {
+        width: 14%;
+        height: 14%;
+        margin-top: 1%;
+    }
+}
+/* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) and (max-width: 767px) { 
+    .jumbotron img {
+        width: 18%;
+        height: 18%;
+        margin-top: 1%
+    }
+}
+/* Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575px) { 
+    .jumbotron img {
+            width: 20%;
+            height: 20%;
+            margin-top: 2%;
+        }        
+}
+.container {
+    margin-top: 3%;
+    margin-bottom: 3%;
+    padding: 1em;
+    max-width: 90%;
+    
+    background-color: #ffffff;
+    /* Container Border */
+    box-shadow: 0 0 10px 0 rgba(72,94,116,0.7);
+    border: 1px solid  rgba(0,0,0,0.3);
+    border-radius: 2px;
+    /* Text Inside Container */
+    font-weight: normal;
+    color: black;
+    text-align: justify;
+    line-height: 20px;
+}
+.container .input-field {
+  width: 80%;
+  margin: 10px 0 0 20px;
+ }  
+ /* label focus color */
+.container .input-field input[type=text]:focus + label, .container .input-field input[type=number]:focus + label, 
+.container .input-field input[type=email]:focus + label, .container .input-field input[type=password]:focus + label {
+  color: #1e88e5;
+  left: 0.1rem;
+}
+.container .input-field label.active {
+  left: 0.1rem;
+}
+ /* label underline focus color */
+.container .input-field input[type=text]:focus, .container .input-field input[type=number]:focus,
+.container .input-field input[type=email]:focus, .container .input-field input[type=password]:focus {
+  border-bottom: 1px solid #1e88e5;
+  box-shadow: 0 1px 0 0 #1e88e5;
+} 
+/* valid color */
+.container .input-field input[type=text].valid, .container .input-field input[type=number].valid,
+.container .input-field input[type=email].valid, .container .input-field input[type=password].valid {
+  border-bottom: 1px solid #2ecc71;
+  box-shadow: 0 1px 0 0 #2ecc71;
+}
+ /* invalid color */
+.container .input-field input[type=text].invalid, .container .input-field input[type=number].invalid,
+.container .input-field input[type=email].invalid, .container .input-field input[type=password].invalid {
+    border-bottom: 1px solid #e74c3c;
+    box-shadow: 0 1px 0 0 #e74c3c;
+}
+
+[type="radio"]:checked+label:after, [type="radio"].with-gap:checked+label:before, [type="radio"].with-gap:checked+label:after {
+    border: 2px solid #0072ff;
+}
+
+[type="radio"]:checked+label:after, [type="radio"].with-gap:checked+label:after {
+    background-color: #0072ff;
+}
+.collapsible-header {
+    font-weight: bold;
+}
+.collapsible-body {
+    padding: 0 0 0 0;
+}
+/*a {
+   margin: 0 5px 5px 0;
+}*/
